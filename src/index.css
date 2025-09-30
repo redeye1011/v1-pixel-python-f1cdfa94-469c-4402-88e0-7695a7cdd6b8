@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 60 96% 54%;
+    --primary: 60 96% 54%;
+    --primary-foreground: 240 10% 3.9%;
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+    --border: 240 4% 16%;
+    --ring: 60 96% 54%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 60 96% 54%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 60 96% 54%;
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 60 96% 54%;
+    --accent: 240 4% 16%;
+    --accent-foreground: 60 96% 54%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --input: 240 4% 16%;
+    --radius: 0rem;
+  }
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 60 96% 54%;
+    --primary: 60 96% 54%;
+    --primary-foreground: 240 10% 3.9%;
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+    --border: 240 4% 16%;
+    --ring: 60 96% 54%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 60 96% 54%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 60 96% 54%;
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 60 96% 54%;
+    --accent: 240 4% 16%;
+    --accent-foreground: 60 96% 54%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --input: 240 4% 16%;
+  }
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-[#1A1A1A] text-neon-green font-pixel;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    text-rendering: optimizeLegibility;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAUVBMVEWFhYWDg4N3d3dtbW17e3t1dXWBgYGHh4d5eXlzc3OLi4ubm5uVlZWPj4+NjY19fX2JiYl/f39ra2uRkZGZmZlpaWmXl5dvb29xcXGTk5NnZ2c8TV1mAAAAG3RSTlNAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAvEOwtAAAFVklEQVR4XpWWB67c2BUFb3g557T/hRo9/WUMZHlgr4Bg8Z4qQgQJlHI4A8SzFVrapvmTF9O7dmYRFZ60YiBhJRCgh1FYhiLAmdvX0CzTOpNE77ME0Zty/nWWzchDtiqrmQDeuv3powQ5ta2eN0FY0InkqDD73lT9c9lEzwUNqgFHs9VQce3TVClFCQrSTfOiYkVJQBmpbq2L6iZavPnAPcoU0dSw0SUTqz/GtrE+eYIqCqNEo6QG0HIHkYQIaZSbUn6DDYAyO908AZiTZCn5LCAIlEM6xRgGcDc2YEmVEAMmwDgrHBYHicIY8blGcCXJo9/AAgVPFI/BsmYCRxdTuNoA44RJN0lOKhmMXeL6BRWIk/adpcFNMSDvhFvanAafPxxCRGSJTtVDsjVpBCg6CBuH2OKKIcIZA7RUNLVRpA旭YRN9RKi/eMGoBfMoEV7NYmjxahtVyPL2gGwpYOjDGObMRyAMf2wJAEi4gGhurHPAs2S8cbMKIoZMQxDCPgPAI+G2sK0MIoZSiGG4M5p2ZgRCOD6mtkmSfCLJ+HOUa+Y8415TTCF2buh6G1S5d9HCPbBLA8U8GKC7C8DRMsMwgNDAO6kHjGgkSbAWzPx5M+tNY5SPDPuGvGKAXA63A4EaU2sWrxoQL3IIHcLLC4TxcriTJFz20NZzAoA8e+QUZ4ljuSO6AZ2BrmoE0gIWJyL1dGdB2eCzB2BCB9ATFPu5Z6isFP flashy QAF37GTY5ODPMAi+Gq2jC2hPQEGqNi2GZNQ6s0lAPwGvPaU+zWYsQuhcmX8YBPGgP6L+aD9k7j2SgIOJ/6YJ4lI0SlcIBlesQ3S6U+6S7L9R6huZNw6JH7m9N8Y2Y2kIwM/3MKJjVKAAJo2zASAYDTF205gJEv24S16D74O8/dcegeScP5LgNI/sC4S2hTMwV+2C4K6DRQkYvY2bHwCM5J2a4f3H2ALB3l/f+p4T2B8G3G2w2gztxGPE3ADKkG+gL6A/0bY/d6I2wZ9t/lB3YKm6s5Db6K2Z6AG2B/6Y5E/os7Wv6e2gY2BfQ2w30ChwI6qGvU2sUvQ2wNroV2Bf2wBpr62mUuLAf+kSYCnQJccAnLz/7Qp4GQAA9XokgnRI+ifd5PSV3/q+6n5e5eLD5M9n13bvdg6m2jGa/gL6g+2j6I/2c5u++gH0B/bO0YwJ25d2eBv2lP8P+iP2j5t/2j5s/2X/0f2j2+L/2H/0f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2j/2f2-A9/czd5u2ABwAAAABJRU5ErkJggg==');
+  }
+}
